@@ -148,10 +148,53 @@
         font-size: 18px;
       }
 
-      h2 {
-        font-size: 32px;
-      }
-    }
+     h2 {
+  font-size: 32px;
+}
+}
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.accordion-btn {
+  width: 100%;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 25px;
+  text-align: left;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.accordion-btn:hover {
+  background: #312e81;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: white;
+  padding: 0 25px;
+}
+
+.accordion-content p {
+  margin: 20px 0;
+  font-size: 18px;
+}
   </style>
 </head>
 <body>
@@ -164,25 +207,100 @@
     </p>
   </header>
 
-  <section>
-    <div class="container">
-      <h2>¿Qué es la aporofobia?</h2>
+ <section>
+  <div class="container">
 
-      <div class="card">
-        <p>
-          La aporofobia es el rechazo, miedo o discriminación hacia las personas pobres o en situación de vulnerabilidad.
-        </p>
+    <h2>Información sobre la aporofobia</h2>
 
-        <br>
+    <div class="accordion">
 
-        <p>
-          Este problema puede verse en comentarios, exclusión social, burlas o indiferencia hacia quienes atraviesan dificultades económicas.
-        </p>
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          📘 ¿Qué es la aporofobia?
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            La aporofobia es el rechazo, miedo o discriminación hacia las personas pobres o en situación de vulnerabilidad.
+          </p>
+
+          <p>
+            La palabra fue creada por la filósofa Adela Cortina en 1995.
+            Se relaciona con el desprecio hacia quienes viven situaciones de pobreza o exclusión social.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section>
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          🧠 ¿Por qué sucede?
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            Muchas veces la sociedad valora más a quienes pueden ofrecer beneficios o ventajas.
+          </p>
+
+          <p>
+            Las personas vulnerables suelen ser ignoradas porque se piensa que “no tienen nada para aportar”.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          ⚠️ Consecuencias
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            La aporofobia genera discriminación, violencia, exclusión social y baja autoestima.
+          </p>
+
+          <p>
+            También dificulta que las personas puedan acceder a trabajo, ayuda o inclusión social.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          📊 Datos reales
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            Millones de personas viven en situación de pobreza o calle.
+          </p>
+
+          <p>
+            Muchas sufren agresiones, rechazo o discriminación diariamente.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">
+          ❤️ ¿Cómo combatirla?
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            La empatía, la educación y la solidaridad son fundamentales.
+          </p>
+
+          <p>
+            Todas las personas merecen dignidad y respeto, sin importar su situación económica.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  
     <div class="container">
       <h2>Ejemplos</h2>
 
@@ -273,6 +391,22 @@
       Trabajo escolar sobre la aporofobia
     </p>
   </footer>
+
+<<script>
+const buttons = document.querySelectorAll(".accordion-btn");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+
+    if(content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
 
 </body>
 </html>
