@@ -163,11 +163,18 @@
     }
 
     .circle{
-     .logo-img{
-  width:75px;
-  height:75px;
-  object-fit:contain;
+    .circle{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+  overflow:hidden;
 }
+
     }
 
     .circle:hover{
@@ -826,27 +833,36 @@
 
       <div class="social-buttons">
 
-        <a href="https://www.instagram.com/no_a_la_aporofobia?igsh=MTE0bGpnZmF5OTc0&utm_source=" target="_blank">
+<div class="circle instagram">
 
-          <div class="circle instagram">
-            📷
-          </div>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+    alt="Instagram"
+    class="logo-img"
+  >
 
-          <div class="social-name">
-            Instagram
-          </div>
+</div>
 
-        </a>
+<div class="social-name">
+  Instagram
+</div>
+
 
         <a href="https://www.tiktok.com/@no.a.la.aporofobi?_r=1&_t=ZS-96MmPLXPlpM" target="_blank">
 
-          <div class="circle tiktok">
-            🎵
-          </div>
+        <div class="circle tiktok">
 
-          <div class="social-name">
-            TikTok
-          </div>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg"
+    alt="TikTok"
+    class="logo-img"
+  >
+
+</div>
+
+<div class="social-name">
+  TikTok
+</div>
 
         </a>
 
