@@ -148,53 +148,10 @@
         font-size: 18px;
       }
 
-     h2 {
-  font-size: 32px;
-}
-}
-}
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.accordion-item {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.accordion-btn {
-  width: 100%;
-  background: #1e3a8a;
-  color: white;
-  border: none;
-  padding: 25px;
-  text-align: left;
-  font-size: 24px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.accordion-btn:hover {
-  background: #312e81;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background: white;
-  padding: 0 25px;
-}
-
-.accordion-content p {
-  margin: 20px 0;
-  font-size: 18px;
-}
+      h2 {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -207,100 +164,65 @@
     </p>
   </header>
 
- <section>
-  <div class="container">
+  <section>
+    <div class="container">
+      <h2>Tarjetas informativas</h2>
 
-    <h2>Información sobre la aporofobia</h2>
+      <div class="grid">
 
-    <div class="accordion">
-
-      <div class="accordion-item">
-        <button class="accordion-btn">
-          📘 ¿Qué es la aporofobia?
-        </button>
-
-        <div class="accordion-content">
+        <div class="card">
+          <h3>📘 ¿Qué es la aporofobia?</h3>
           <p>
-            La aporofobia es el rechazo, miedo o discriminación hacia las personas pobres o en situación de vulnerabilidad.
-          </p>
-
-          <p>
-            La palabra fue creada por la filósofa Adela Cortina en 1995.
-            Se relaciona con el desprecio hacia quienes viven situaciones de pobreza o exclusión social.
+            La palabra “aporofobia” fue creada por la filósofa Adela Cortina en 1995.
+            Se refiere al rechazo, miedo o desprecio hacia las personas pobres o vulnerables.
           </p>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <button class="accordion-btn">
-          🧠 ¿Por qué sucede?
-        </button>
-
-        <div class="accordion-content">
+        <div class="card">
+          <h3>🧠 ¿Por qué sucede?</h3>
           <p>
-            Muchas veces la sociedad valora más a quienes pueden ofrecer beneficios o ventajas.
-          </p>
-
-          <p>
-            Las personas vulnerables suelen ser ignoradas porque se piensa que “no tienen nada para aportar”.
+            Muchas veces la sociedad valora más a quienes pueden ofrecer beneficios.
+            Las personas vulnerables son ignoradas porque se cree que “no tienen nada para aportar”.
           </p>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <button class="accordion-btn">
-          ⚠️ Consecuencias
-        </button>
-
-        <div class="accordion-content">
+        <div class="card">
+          <h3>⚠️ Consecuencias</h3>
           <p>
-            La aporofobia genera discriminación, violencia, exclusión social y baja autoestima.
-          </p>
-
-          <p>
-            También dificulta que las personas puedan acceder a trabajo, ayuda o inclusión social.
+            La aporofobia genera exclusión, baja autoestima, discriminación y violencia.
+            También dificulta que las personas puedan salir de situaciones de pobreza.
           </p>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <button class="accordion-btn">
-          📊 Datos reales
-        </button>
-
-        <div class="accordion-content">
+        <div class="card">
+          <h3>📊 Datos reales</h3>
           <p>
-            Millones de personas viven en situación de pobreza o calle.
-          </p>
-
-          <p>
-            Muchas sufren agresiones, rechazo o discriminación diariamente.
+            Miles de personas viven en situación de calle y pobreza.
+            Muchas sufren agresiones físicas, verbales y discriminación todos los días.
           </p>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <button class="accordion-btn">
-          ❤️ ¿Cómo combatirla?
-        </button>
-
-        <div class="accordion-content">
+        <div class="card">
+          <h3>📰 Discurso de odio</h3>
           <p>
-            La empatía, la educación y la solidaridad son fundamentales.
-          </p>
-
-          <p>
-            Todas las personas merecen dignidad y respeto, sin importar su situación económica.
+            Algunas personas y medios relacionan la pobreza con delincuencia o vagancia,
+            creando prejuicios que aumentan el rechazo social.
           </p>
         </div>
-      </div>
 
+        <div class="card">
+          <h3>❤️ ¿Cómo combatirla?</h3>
+          <p>
+            Informándonos, escuchando, ayudando y promoviendo la empatía.
+            Todas las personas merecen dignidad y respeto.
+          </p>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  
+  <section>
     <div class="container">
       <h2>Ejemplos</h2>
 
@@ -391,22 +313,6 @@
       Trabajo escolar sobre la aporofobia
     </p>
   </footer>
-
-<<script>
-const buttons = document.querySelectorAll(".accordion-btn");
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-
-    if(content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-});
-</script>
 
 </body>
 </html>
