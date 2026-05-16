@@ -17,28 +17,29 @@
     }
 
     body{
-      background:#f1f5f9;
+      background:#eef2ff;
       color:#1e293b;
       line-height:1.6;
     }
 
     header{
-      background:linear-gradient(135deg,#1e3a8a,#4338ca);
+      background:linear-gradient(135deg,#4338ca,#312e81);
       color:white;
-      padding:100px 20px;
       text-align:center;
+      padding:110px 20px 90px;
     }
 
     header h1{
-      font-size:60px;
+      font-size:65px;
       margin-bottom:20px;
+      letter-spacing:2px;
     }
 
     header p{
-      max-width:800px;
+      font-size:24px;
+      max-width:900px;
       margin:auto;
-      font-size:22px;
-      color:#dbeafe;
+      color:#e0e7ff;
     }
 
     section{
@@ -46,26 +47,25 @@
     }
 
     .container{
-      max-width:1100px;
+      max-width:1200px;
       margin:auto;
     }
 
     h2{
       text-align:center;
-      font-size:42px;
-      margin-bottom:45px;
+      font-size:45px;
       color:#1e3a8a;
+      margin-bottom:55px;
     }
 
     .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
 
     .card{
-      background:transparent;
-      height:270px;
+      height:340px;
       perspective:1000px;
       cursor:pointer;
     }
@@ -74,7 +74,7 @@
       position:relative;
       width:100%;
       height:100%;
-      transition:transform 0.5s;
+      transition:transform 0.6s;
       transform-style:preserve-3d;
     }
 
@@ -87,52 +87,72 @@
       position:absolute;
       width:100%;
       height:100%;
-      border-radius:25px;
-      padding:28px;
-      background:white;
-      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      border-radius:28px;
+      padding:30px;
       backface-visibility:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
     }
 
     .card-front{
+      background:white;
       display:flex;
       flex-direction:column;
-      justify-content:center;
+      justify-content:space-between;
     }
 
     .card-back{
+      background:#dfe5ff;
       transform:rotateY(180deg);
       overflow-y:auto;
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
     }
 
     .card h3{
-      margin-bottom:15px;
+      font-size:30px;
       color:#312e81;
-      font-size:27px;
+      margin-bottom:18px;
     }
 
     .card p{
-      font-size:17px;
+      font-size:18px;
+    }
+
+    .flip{
+      text-align:right;
+      font-size:40px;
+      color:#4338ca;
+      opacity:0.7;
+    }
+
+    .examples .card-back{
+      background:#ebe9ff;
+    }
+
+    .combatir .card-back{
+      background:#e3f7e7;
     }
 
     .social{
-      background:linear-gradient(135deg,#0f172a,#1e293b);
-      text-align:center;
+      background:linear-gradient(135deg,#020617,#1e1b4b);
       color:white;
+      text-align:center;
     }
 
     .social h2{
       color:white;
     }
 
+    .social p{
+      font-size:22px;
+    }
+
     .social-buttons{
       display:flex;
       justify-content:center;
-      gap:40px;
+      gap:50px;
       margin-top:50px;
       flex-wrap:wrap;
     }
@@ -149,9 +169,9 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:65px;
-      transition:0.3s;
+      font-size:70px;
       box-shadow:0 10px 25px rgba(0,0,0,0.3);
+      transition:0.3s;
     }
 
     .circle:hover{
@@ -166,9 +186,9 @@
       background:black;
     }
 
-    .social p{
+    .social-name{
       margin-top:15px;
-      font-size:24px;
+      font-size:25px;
       font-weight:bold;
     }
 
@@ -177,24 +197,29 @@
       color:#94a3b8;
       text-align:center;
       padding:25px;
+      font-size:18px;
     }
 
     @media(max-width:700px){
 
       header h1{
-        font-size:40px;
+        font-size:45px;
       }
 
       header p{
-        font-size:18px;
+        font-size:19px;
       }
 
       h2{
-        font-size:32px;
+        font-size:35px;
       }
 
       .card{
-        height:300px;
+        height:360px;
+      }
+
+      .card h3{
+        font-size:26px;
       }
 
     }
@@ -215,11 +240,13 @@
 
   </header>
 
+  <!-- INFORMATE -->
+
   <section>
 
     <div class="container">
 
-      <h2>Tarjetas informativas</h2>
+      <h2>Descubrí más</h2>
 
       <div class="grid">
 
@@ -230,11 +257,19 @@
 
             <div class="card-front">
 
-              <h3>📘 ¿Qué es la aporofobia?</h3>
+              <div>
 
-              <p>
-                Es el rechazo o desprecio hacia las personas pobres o vulnerables.
-              </p>
+                <h3>📘 ¿Qué es la aporofobia?</h3>
+
+                <p>
+                  Es el rechazo o desprecio hacia las personas pobres o vulnerables.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -270,11 +305,19 @@
 
             <div class="card-front">
 
-              <h3>🧠 ¿Por qué sucede?</h3>
+              <div>
 
-              <p>
-                Algunas personas creen que quienes tienen menos “no aportan nada”.
-              </p>
+                <h3>🧠 ¿Por qué sucede?</h3>
+
+                <p>
+                  Algunas personas creen que quienes tienen menos “no aportan nada”.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -310,11 +353,19 @@
 
             <div class="card-front">
 
-              <h3>⚠️ Consecuencias</h3>
+              <div>
 
-              <p>
-                La aporofobia afecta la dignidad y la vida de muchas personas.
-              </p>
+                <h3>⚠️ Consecuencias</h3>
+
+                <p>
+                  La aporofobia afecta la dignidad y la vida de muchas personas.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -350,11 +401,19 @@
 
             <div class="card-front">
 
-              <h3>🏠 Personas sin hogar</h3>
+              <div>
 
-              <p>
-                Muchas personas viven en la calle y sufren discriminación diariamente.
-              </p>
+                <h3>🏠 Personas sin hogar</h3>
+
+                <p>
+                  Muchas personas viven en la calle y sufren discriminación diariamente.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -390,11 +449,19 @@
 
             <div class="card-front">
 
-              <h3>📰 Discurso de odio</h3>
+              <div>
 
-              <p>
-                A veces se relaciona la pobreza con delincuencia o vagancia.
-              </p>
+                <h3>📰 Discurso de odio</h3>
+
+                <p>
+                  A veces se relaciona la pobreza con delincuencia o vagancia.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -430,11 +497,19 @@
 
             <div class="card-front">
 
-              <h3>📱 Redes sociales</h3>
+              <div>
 
-              <p>
-                En internet también existen burlas y discriminación.
-              </p>
+                <h3>📱 Redes sociales</h3>
+
+                <p>
+                  En internet también existen burlas y discriminación.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -469,11 +544,13 @@
 
   </section>
 
-  <section>
+  <!-- EJEMPLOS -->
+
+  <section class="examples">
 
     <div class="container">
 
-      <h2>Ejemplos</h2>
+      <h2>Ejemplos de aporofobia</h2>
 
       <div class="grid">
 
@@ -482,17 +559,25 @@
 
             <div class="card-front">
 
-              <h3>🏠 Personas en la calle</h3>
+              <div>
 
-              <p>
-                Ignorar o tratar mal a personas en situación de calle.
-              </p>
+                <h3>🏠 Personas en la calle</h3>
+
+                <p>
+                  Ignorar o tratar mal a personas en situación de calle.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
             <div class="card-back">
 
-              <h3>🏠 Ejemplo</h3>
+              <h3>🏠 Más información</h3>
 
               <p>
                 Muchas veces las personas pasan al lado de alguien sin hogar y lo ignoran completamente.
@@ -514,20 +599,28 @@
 
             <div class="card-front">
 
-              <h3>💬 Comentarios</h3>
+              <div>
 
-              <p>
-                Hacer burlas o usar prejuicios relacionados con la pobreza.
-              </p>
+                <h3>💬 Comentarios</h3>
+
+                <p>
+                  Hacer burlas o usar prejuicios relacionados con la pobreza.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
             <div class="card-back">
 
-              <h3>💬 Ejemplo</h3>
+              <h3>💬 Más información</h3>
 
               <p>
-                Algunas personas hacen chistes ofensivos sobre quienes tienen menos recursos.
+                Algunas personas hacen comentarios ofensivos o chistes sobre quienes tienen menos recursos.
               </p>
 
               <br>
@@ -546,17 +639,25 @@
 
             <div class="card-front">
 
-              <h3>🚫 Exclusión</h3>
+              <div>
 
-              <p>
-                Negar oportunidades por la situación económica de alguien.
-              </p>
+                <h3>🚫 Exclusión</h3>
+
+                <p>
+                  Negar oportunidades por la situación económica de alguien.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
             <div class="card-back">
 
-              <h3>🚫 Ejemplo</h3>
+              <h3>🚫 Más información</h3>
 
               <p>
                 Algunas personas son discriminadas en trabajos o espacios sociales por ser pobres.
@@ -579,7 +680,9 @@
 
   </section>
 
-  <section>
+  <!-- COMO COMBATIRLA -->
+
+  <section class="combatir">
 
     <div class="container">
 
@@ -592,11 +695,19 @@
 
             <div class="card-front">
 
-              <h3>🤝 Empatía</h3>
+              <div>
 
-              <p>
-                Comprender la realidad de otras personas.
-              </p>
+                <h3>🤝 Empatía</h3>
+
+                <p>
+                  Comprender la realidad de otras personas.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -624,11 +735,19 @@
 
             <div class="card-front">
 
-              <h3>📚 Educación</h3>
+              <div>
 
-              <p>
-                Informarnos ayuda a combatir los prejuicios.
-              </p>
+                <h3>📚 Educación</h3>
+
+                <p>
+                  Informarnos ayuda a combatir los prejuicios.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -656,11 +775,19 @@
 
             <div class="card-front">
 
-              <h3>🌎 Inclusión</h3>
+              <div>
 
-              <p>
-                Promover igualdad y oportunidades para todos.
-              </p>
+                <h3>🌎 Inclusión</h3>
+
+                <p>
+                  Promover igualdad y oportunidades para todos.
+                </p>
+
+              </div>
+
+              <div class="flip">
+                ↺
+              </div>
 
             </div>
 
@@ -689,6 +816,8 @@
 
   </section>
 
+  <!-- REDES -->
+
   <section class="social">
 
     <div class="container">
@@ -707,7 +836,9 @@
             📷
           </div>
 
-          <p>Instagram</p>
+          <div class="social-name">
+            Instagram
+          </div>
 
         </a>
 
@@ -717,7 +848,9 @@
             🎵
           </div>
 
-          <p>TikTok</p>
+          <div class="social-name">
+            TikTok
+          </div>
 
         </a>
 
@@ -729,9 +862,7 @@
 
   <footer>
 
-    <p>
-      Trabajo escolar sobre la aporofobia
-    </p>
+    Trabajo escolar sobre la aporofobia
 
   </footer>
 
