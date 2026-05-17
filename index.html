@@ -149,51 +149,61 @@
       font-size:22px;
     }
 
-    .social-buttons{
-      display:flex;
-      justify-content:center;
-      gap:50px;
-      margin-top:50px;
-      flex-wrap:wrap;
-    }
+  <!-- REEMPLAZÁ TODO TU CSS DE REDES POR ESTE -->
 
-    .social a{
-      text-decoration:none;
-      color:white;
-    }
+.social-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:80px;
+  margin-top:50px;
+  flex-wrap:wrap;
+}
 
-    .circle{
-    .circle{
-  width:160px;
-  height:160px;
+.social a{
+  text-decoration:none;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.circle{
+  width:150px;
+  height:150px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
-  transition:0.3s;
   overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+  transition:0.3s;
+  background:white;
 }
 
-    }
+.circle:hover{
+  transform:scale(1.08);
+}
 
-    .circle:hover{
-      transform:scale(1.1);
-    }
+.logo-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    .instagram{
-      background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);
-    }
+.instagram{
+  background:white;
+}
 
-    .tiktok{
-      background:black;
-    }
+.tiktok{
+  background:black;
+}
 
-    .social-name{
-      margin-top:15px;
-      font-size:25px;
-      font-weight:bold;
-    }
+.social-name{
+  margin-top:18px;
+  font-size:28px;
+  font-weight:bold;
+}
 
     footer{
       background:black;
@@ -850,21 +860,38 @@
 
         <a href="https://www.tiktok.com/@no.a.la.aporofobi?_r=1&_t=ZS-96MmPLXPlpM" target="_blank">
 
-        <div class="circle tiktok">
+  <div class="circle tiktok">
 
-  <img
-    src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg"
-    alt="TikTok"
-    class="logo-img"
-  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg"
+      alt="TikTok"
+      class="logo-img"
+    >
 
-</div>
+  </div>
 
-<div class="social-name">
-  TikTok
-</div>
+  <div class="social-name">
+    TikTok
+  </div>
 
-        </a>
+</a>
+        <a href="https://www.instagram.com/no_a_la_aporofobia?igsh=MTE0bGpnZmF5OTc0&utm_source=" target="_blank">
+
+  <div class="circle instagram">
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+      alt="Instagram"
+      class="logo-img"
+    >
+
+  </div>
+
+  <div class="social-name">
+    Instagram
+  </div>
+
+</a>
 
       </div>
 
