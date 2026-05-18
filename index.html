@@ -135,6 +135,52 @@
       background:#e3f7e7;
     }
 
+    .mini-notes{
+      background:#fff7ed;
+      padding:55px 20px;
+    }
+
+    .mini-notes h2{
+      color:#9a3412;
+      margin-bottom:30px;
+    }
+
+    .notes-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+    }
+
+    .note{
+      background:white;
+      border-left:6px solid #f97316;
+      border-radius:8px;
+      padding:20px;
+      min-height:130px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .note strong{
+      color:#9a3412;
+      font-size:22px;
+      margin-bottom:8px;
+    }
+
+    .note p,
+    .note a{
+      color:#334155;
+      font-size:17px;
+    }
+
+    .note a{
+      font-weight:bold;
+      text-decoration-color:#f97316;
+      text-underline-offset:4px;
+    }
+
     .social{
       background:linear-gradient(135deg,#020617,#1e1b4b);
       color:white;
@@ -281,7 +327,7 @@
               <h3>📘 ¿Qué es la aporofobia?</h3>
 
               <p>
-                La palabra “aporofobia” fue creada por la filósofa Adela Cortina en 1995 para nombrar el rechazo hacia las personas pobres o vulnerables.
+                La palabra “aporofobia” fue creada por la filósofa <a href="https://es.wikipedia.org/wiki/Adela_Cortina" target="_blank" rel="noopener noreferrer">Adela Cortina</a> en 1995 para nombrar el rechazo hacia las personas pobres o vulnerables.
               </p>
 
               <br>
@@ -479,6 +525,37 @@
             </div>
 
           </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MINI NOTAS -->
+
+  <section class="mini-notes">
+
+    <div class="container">
+
+      <h2>Frases para recordar</h2>
+
+      <div class="notes-grid">
+
+        <div class="note">
+          <strong>No es una broma</strong>
+          <p>La aporofobia lastima la autoestima, aísla y puede empujar a una persona a sentir que no vale.</p>
+        </div>
+
+        <div class="note">
+          <strong>Bomba de tiempo</strong>
+          <p>Cuando una sociedad normaliza el desprecio al pobre, la exclusión crece en silencio.</p>
+        </div>
+
+        <div class="note">
+          <strong>Link informativo</strong>
+          <p><a href="https://ajuntament.barcelona.cat/bcnvsodi/es/aporofobia-juicio-y-desprecio-al-pobre/" target="_blank" rel="noopener noreferrer">Leer más sobre aporofobia</a></p>
         </div>
 
       </div>
